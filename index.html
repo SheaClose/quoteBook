@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body ng-controller="mainCtrl">
+<input type="text" name="inputbox" placeholder="Filter Quotes" ng-model="filterQuoteBy">
+ <p class="Quoute" ng-repeat="quote in allQuotes | filter:filterQuoteBy">
+    <span class="author"><strong>Author:</strong> {{quote.author}}
+    </span>
+    <span class="text"><strong>Quote:</strong> {{quote.text}}    </span>
+    <button ng-click = "removeData(quote.text)">Delete</button>
+ </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script></script>
+    <script type="text/javascript"src='js/maincontroller.js'></script>
+    <script src="js/service.js" charset="utf-8"></script>
+  </body>
+</html>
