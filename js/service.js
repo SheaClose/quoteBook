@@ -13,8 +13,7 @@ angular.module('myApp')
       return quotes;
     };
     this.addData = function(newObj) {
-        if (newObj["text"] && newObj["author"]) { //if(newQuote.text && newQuote.author){
-          quotes.push(newObj);
+        if (newObj["text"] && newObj["author"]) {       quotes.push(newObj);
           return true;
         }
         return false;

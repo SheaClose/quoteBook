@@ -7,12 +7,18 @@
   </head>
   <body ng-controller="mainCtrl">
 <input type="text" name="inputbox" placeholder="Filter Quotes" ng-model="filterQuoteBy">
+
  <p class="Quoute" ng-repeat="quote in allQuotes | filter:filterQuoteBy">
     <span class="author"><strong>Author:</strong> {{quote.author}}
     </span>
     <span class="text"><strong>Quote:</strong> {{quote.text}}    </span>
     <button ng-click = "removeData(quote.text)">Delete</button>
  </p>
+
+
+ <input type="text" name="name" placeholder="Author Name" ng-model="newQuoteauthor">
+ <input type="text" name="name" placeholder="Quote Text" ng-model="newQuotetext">
+ <button type="button" name="button" ng-click="addData()">Submit new quoute</button>
 
 
 
